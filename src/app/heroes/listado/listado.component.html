@@ -1,0 +1,17 @@
+<div *ngIf='heroeBorrado != ""; else noBorrado'>
+    <h3> No me quiero ir señor stark : 
+        <small>{{heroeBorrado}}</small>
+    </h3>    
+</div>
+
+<ng-template #noBorrado>
+    <h3>Thanos espera</h3>
+</ng-template>
+
+<button (click)='borrarHeroe()'>Borrar</button>
+
+<ul>
+    <li *ngFor='let h of heroes; let i = index;'>
+        {{h}} {{i}}
+    </li>
+</ul>
